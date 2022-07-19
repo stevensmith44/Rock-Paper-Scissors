@@ -24,29 +24,30 @@
         let ComputerC = getComputerChoice();
         let HumanC = getHumanChoice();
 
-        function playRound(ComputerC,HumanC){
-            if (ComputerC == HumanC){
+        function playRound(Computer,Human){
+            if (Computer == Human){
                 return alert("its a tie")
             }
-            else if (ComputerC == "Rock" && HumanC == "Paper"){
+            else if (Computer == "Rock" && Human == "Paper"){
                 return alert("Computer won")
             }
-            else if (ComputerC == "Rock" && HumanC == "Scissors"){
+            else if (Computer == "Rock" && Human == "Scissors"){
                 return alert("You won")
             }
-            else if (ComputerC == "Paper" && HumanC == "Rock"){
+            else if (Computer == "Paper" && Human == "Rock"){
                 return alert("Computer won")
             }
-            else if (ComputerC == "Paper" && HumanC == "Scissors"){
+            else if (Computer == "Paper" && Human == "Scissors"){
                 return alert("You won")
             }
-            else if (ComputerC == "Scissors" && HumanC == "Paper"){
+            else if (Computer == "Scissors" && Human == "Paper"){
                 return alert("Computer won")
             }
-            else if (ComputerC == "Scissors" && HumanC == "Rock"){
+            else if (Computer == "Scissors" && Human == "Rock"){
                 return alert("You won")
             }
         }
+        playRound(ComputerC,HumanC)
         
     </script>
 </body>
