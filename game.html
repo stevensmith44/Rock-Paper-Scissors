@@ -8,12 +8,7 @@
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
-    <label for="weapons">Choose your weapon</label>
-    <select id="weapons">
-        <option value="Rock">Rock</option>
-        <option value="Paper">Paper</option>
-        <option value="Scissors">Scissors</option>
-    </select>
+    
 
     <script>
         let choices = ['rock','paper','scissors']
@@ -23,8 +18,36 @@
         } 
         
         function getHumanChoice(){
-            
+            return prompt("Whats your weapon")
         }
+
+        let ComputerC = getComputerChoice();
+        let HumanC = getHumanChoice();
+
+        function playRound(ComputerC,HumanC){
+            if (ComputerC == HumanC){
+                return alert("its a tie")
+            }
+            else if (ComputerC == "Rock" && HumanC == "Paper"){
+                return alert("Computer won")
+            }
+            else if (ComputerC == "Rock" && HumanC == "Scissors"){
+                return alert("You won")
+            }
+            else if (ComputerC == "Paper" && HumanC == "Rock"){
+                return alert("Computer won")
+            }
+            else if (ComputerC == "Paper" && HumanC == "Scissors"){
+                return alert("You won")
+            }
+            else if (ComputerC == "Scissors" && HumanC == "Paper"){
+                return alert("Computer won")
+            }
+            else if (ComputerC == "Scissors" && HumanC == "Rock"){
+                return alert("You won")
+            }
+        }
+        
     </script>
 </body>
 </html>
