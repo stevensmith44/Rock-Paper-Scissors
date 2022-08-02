@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 0 ;
+}
+
+.weapons_align, .score_board{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;    
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+button{
+    background-color: yellow;
+    font-family: inherit;
+    font-weight: bolder;
+}
+
+.option{
+    margin: 0em 6em 0em 6.55em;
+}
