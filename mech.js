@@ -28,7 +28,9 @@ options.forEach((options) => {
         Human_span.textContent = Human_score;
         Computer_span.textContent = Computer_score;
 
-        Winner_Checker(Human_score,Computer_score)
+        Winner_Checker(Human_score,Computer_score);
+
+        Disable_Button(Human_score,Computer_score);
     })
 })
 
@@ -74,16 +76,24 @@ function Winner_Decider(Player_input,Computer_input){
 }
 
 function Winner_Checker(Human_score,Computer_score){
-    if (Human_score == 5){
+    if (Human_score >= 5){
         alert("YOU WIN");
         alert("REFRESH IF YOU WANT TO PLAY MORE");
         return true;
     }
-    else if(Computer_score == 5){
+    else if(Computer_score >= 5){
         alert("YOU LOSE");
         alert("REFRESH IF YOU WANT TO PLAY MORE");
         return true;
     }
     return false;
-
 }
+
+function Disable_Button(Human_score,Computer_score){
+    if (Human_score >= 5 || Computer_score >= 5){
+        options.forEach(element => {
+            element.disabled = true
+        })
+    }
+}
+
